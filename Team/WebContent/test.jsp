@@ -42,13 +42,13 @@
 			width: 16%;
 			text-align: center;
 		}
-		div {
-			width:200px;
+		.inbound, .outbound {
+			width:500px;
 			height:200px;
 			display:inline-block;
 		}
-		#box1{ background:#ff6600;}
-		#box2{ background:#ff00ff;}
+		.outbound{ background:#ff6600;}
+		.inbound{ background:#ff00ff;} 
 		
 	</style>
 	
@@ -61,46 +61,33 @@
 </head>
 <body>
 	<div>
-		<div id="box1">박스1</div>
-		<div id="box2">박스2</div>
+		<!-- 가는 여정 -->
+		<div class="outbound">
+			<!-- Nav tabs -->
+			<h2>가는날</h2>
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a href="#">Home</a></li>
+				<li role="presentation"><a href="#">Profile</a></li>
+				<li role="presentation"><a href="#">Messages</a></li>
+			</ul>
+		</div>
+		<!-- // 가는여정 -->
+
+		<!-- 오는 여정 -->
+		<div class="inbound">
+			<!-- Nav tabs -->
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a href="#">Home</a></li>
+				<li role="presentation"><a href="#">Profile</a></li>
+				<li role="presentation"><a href="#">Messages</a></li>
+			</ul>
+		</div>
+		<!-- // 오는 여정 -->
+
+		<!-- 운임 버튼 영역 -->
+		<div class="booking-summary"></div>
+		<!-- // 운임 버튼 영역 -->
 	</div>
-
-
-
-	<!-- <div style="background-color:red;">
-			가는 여정
-			<div class="outbound" style="background-color:blue;">
-				<div class="step-avail">
-					<div class="title-area">
-						<h2>
-							가는날
-						</h2>
-					</div>
-				</div>
-				<div>
-				</div>
-			</div>
-			// 가는여정
-			
-			오는 여정
-			<div class="inbound" style="background-color:yellow;">
-				<div class="step-avail">
-					<div class="title-area">
-						<h2>
-							오는날
-						</h2>
-					</div>
-				</div>
-				<div>
-				</div>
-			</div>
-			// 오는 여정
-			
-			운임 버튼 영역
-			<div class="booking-summary">
-			
-			</div>
-			// 운임 버튼 영역
-		</div> -->
 </body>
 </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>adm_main.html</title>
+
+<!-- 모바일 웹 페이지 설정 -->
+<link rel="shortcut icon" href="../assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="../assets/ico/apple-touch-icon-144-precomposed.png" />
+
+<!-- Twitter Bootstrap3 & jQuery -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- 나눔고딕 웹 폰트 적용 -->
+<link rel="stylesheet" type="text/css"
+	href="../assets/css/nanumfont.css" />
+
+<!-- 반응형 웹을 지원하지 않을 경우 -->
+<!-- <link rel="stylesheet" href="assets/css/non-responsive.css" /> -->
+
+<!-- IE8 이하 버전 지원 -->
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="../assets/js/html5shiv.js"></script>
+	<script type="text/javascript" src="../assets/js/respond.min.js"></script>
+	<![endif]-->
+
+<!-- IE10 반응형 웹 버그 보완 -->
+<!--[if gt IE 9]>
+	<link rel="stylesheet" type="text/css" href="../assets/css/ie10.css" />
+	<script type="text/javascript" src="../assets/js/ie10.js"></script>
+	<![endif]-->
+<link rel="stylesheet" type="text/css" href="../css/basic.css">
+
+<style type="text/css">
+.navbar-nav {
+	width: 100%;
+}
+
+.navbar-nav>li {
+	width: 16%;
+	text-align: center;
+}
+
+.nav navbar-nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+.nav.navbar-nav li a:hover, .dropdown:hover .dropbtn {
+	background-color: #333;
+	color: white;
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #B0B0B0
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+</style>
+
+
+<!-- 사용자 정의 스크립트 -->
+<script type="text/javascript">
+	
+</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="navbar-wrapper">
+			<div class="container">
+				<!-- 로고 -->
+				<div id="logo">
+					<a href="#">관리자 모드</a>
+				</div>
+				<!--// 로고 -->
+				<!-- 메뉴바 -->
+				<div class="navbar navbar-default navbar-static-top"
+					role="navigation">
+					<!-- 배경을 제외한 메뉴 항목의 영역 제한 -->
+					<div class="container">
+
+						<!-- 로고 영역 -->
+						<div class="navbar-header">
+							<!-- 반응형 메뉴 버튼 -->
+							<button type="button" class="navbar-toggle"
+								data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+							<!--// 반응형 메뉴 버튼 -->
+
+						</div>
+						<!--// 로고 영역 -->
+						<!-- 메뉴 영역 -->
+						<div class="navbar-collapse collapse">
+							<!-- 메인메뉴 -->
+							<ul class="nav navbar-nav">
+								<li class="dropdown"><a href="#" class="dropbtn">항공권</a>
+									<div class="dropdown-content">
+										<a href="a_ticket/a_ticket.html">항공권 관리</a>
+										<a href="a_ticket/a_admin_user_reservation.html">고객예약정보 관리</a>
+									</div></li>
+								<li class="dropdown"><a href="#" class="dropbtn">게시판</a>
+									<div class="dropdown-content">
+										<a href="a_board/adm_qna_list.html">Q&amp;A</a>
+										<a href="a_board/adm_review_list.html">여행후기</a>
+									</div></li>
+								<li><a href="a_user/adm_user.html">회원정보</a></li>
+								<li><a href="a_hotel/adm_hotel.html">숙박</a></li>
+								<li><a href="a_auction/adm_auction.html">경매</a></li>
+								<li><a href="../main.html">로그아웃</a></li>
+							</ul>
+						</div>
+						<!--// 메뉴 영역 -->
+					</div>
+					<!--// 배경을 제외한 메뉴 항목의 영역 제한 -->
+				</div>
+				<!--// 메뉴바 -->
+
+				<!-- 내용영역 -->
+
+				<!-- //내용영역 -->
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="header_space hidden-xs"></div>
+			<div class="header_space_xs visible-xs"></div>
+		</div>
+
+	</div>
+	<!--// 내용영역 -->
+</body>
+</html>

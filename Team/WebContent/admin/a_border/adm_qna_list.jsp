@@ -9,8 +9,8 @@
 	<title>demo-04</title>
 
 	<!-- 모바일 웹 페이지 설정 -->
-	<link rel="shortcut icon" href="assets/ico/favicon.png" />
-	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+	<link rel="shortcut icon" href="../../assets/ico/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-144-precomposed.png" />
 
 	<!-- Twitter Bootstrap3 & jQuery -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
@@ -18,25 +18,25 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<!-- 나눔고딕 웹 폰트 적용 -->
-	<link rel="stylesheet" type="text/css" href="assets/css/nanumfont.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/nanumfont.css" />
 
 	
 	
 	<!-- 반응형 웹을 지원하지 않을 경우 -->
-	<!-- <link rel="stylesheet" href="assets/css/non-responsive.css" /> -->
+	<!-- <link rel="stylesheet" href="../../assets/css/non-responsive.css" /> -->
 
 	<!-- IE8 이하 버전 지원 -->
 	<!--[if lt IE 9]>
-	<script type="text/javascript" src="assets/js/html5shiv.js"></script>
-	<script type="text/javascript" src="assets/js/respond.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/html5shiv.js"></script>
+	<script type="text/javascript" src="../../assets/js/respond.min.js"></script>
 	<![endif]-->
 
 	<!-- IE10 반응형 웹 버그 보완 -->
 	<!--[if gt IE 9]>
-	<link rel="stylesheet" type="text/css" href="assets/css/ie10.css" />
-	<script type="text/javascript" src="assets/js/ie10.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ie10.css" />
+	<script type="text/javascript" src="../../assets/js/ie10.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="../../css/basic.css">
 	
 	<style type="text/css">
 		.navbar-nav {
@@ -179,7 +179,7 @@ li.dropdown {
 		<div class="header_space"></div>
 		<div class="header_space"></div>
 		<!-- 내용영역 -->
-				
+				<h3 class="text-center">Q&amp;A</h3>
 				<!-- 검색창 -->
 				<div style="text-align: right;">
 					<form  name="form1" method="post" action="" >

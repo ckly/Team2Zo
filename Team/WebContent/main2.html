@@ -22,6 +22,16 @@
 			width: 16.6666%;
 			text-align: center;
 		}
+
+		.sub {
+		    display: none;
+		    position: absolute;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		}
+
 	</style>
 
 	<script type="text/javascript">
@@ -88,8 +98,7 @@
 								<li class="menu"><a href="#">고객센터</a>
 									<div class="sub">
 										<div><a href="#">여행후기</a></div>
-										
-										<div><a href="#" >Q & A</a></div>
+										<div><a href="#" >Q & A</a><div>
 									</div>
 								</li>
 								<li class="menu"><a href="#">마이페이지</a>
@@ -126,7 +135,7 @@
 
 		<!-- //내용영역 -->
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-12 col-xs-12">
 				<!--캐러셀 시작 /////////////////////////////////////////////// -->
 				<div class="container">
 					<div id="carousel-generic" class="carousel slide" data-ride="carousel">
@@ -187,7 +196,27 @@
 				</div>
 				<!--캐러셀 끝 /////////////////////////////////////////////// -->
 			</div>
+			<div class="col-md-6 col-sm-12 col-xs-12" height:100px">
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12 main_img" height:250px;">
+						<img src="img/main_01.jpg">
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 main_img" height:250px;">
+						<img src="img/main_02.jpg">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12 main_img" height:250px;">
+						<img src="img/main_02.jpg">
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 main_img" height:250px;">
+						<img src="img/main_01.jpg">
+					</div>
+				</div>
+			</div>
 		</div>
+				
+
 	</div>
 	<!--// 내용영역 -->
 

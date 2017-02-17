@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,7 +8,7 @@
 
 	<!-- 모바일 웹 페이지 설정 -->
 	<link rel="shortcut icon" href="../../assets/ico/favicon.png" />
-	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-144-precomposed.png" />
 
 	<!-- Twitter Bootstrap3 & jQuery -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
@@ -99,29 +97,51 @@ li.dropdown {
 <!-- 사용자 정의 스크립트 -->
 <script type="text/javascript">
 	$(function() {
+//--체크박스 일괄 선택-----------------------------------------------------------
+		$("#checkAll").click(function() {
+			if ($("#checkAll").prop("checked")) {
+				$("input[type=checkbox]").prop("checked", true);
+			} else {
+				$("input[type=checkbox]").prop("checked", false);
+			}
+		});
+//--체크박스 일괄 선택 끝-----------------------------------------------------------
+
+//--일괄 삭제 버튼 클릭-----------------------------------------------------------
+		$("#deleteAll").click(function() {
+			if ($("input[type=checkbox]").prop("checked")) {
+				if (confirm("선택한 게시물들을 일괄 삭제 하시겠습니까?")) {
+					alert("삭제가 완료 되었습니다.");
+				} else {
+					alert("삭제가 취소 되었습니다.");
+				}
+			} else {
+				alert("선택하신 게시물이 없습니다.");
+			}
+
+		});
+//--일괄삭제 클릭 끝-----------------------------------------------------------
+
+//--답변 버튼 클릭-----------------------------------------------------------
+		$("#reply").click(function() {
+			alert("답변 페이지로 이동...");
+		});
+//--답변 버튼 클릭 끝-----------------------------------------------------------
+
 //--수정 버튼 클릭-----------------------------------------------------------
 		$("#modify").click(function() {
-			popupOpen();
+			alert("수정 페이지로 이동...");
 		});
 //--수정 버튼 클릭 끝-----------------------------------------------------------
 
-//--삭제 버튼 클릭-----------------------------------------------------------
-		$("#delete").click(function() {
-			if (confirm("유저정보를 삭제 하시겠습니까?")) {
-				alert("삭제가 완료 되었습니다.");
-			} else {
-				alert("삭제가 취소 되었습니다.");
-			}
+//--등록 버튼 클릭-----------------------------------------------------------
+		$("#write").click(function() {
+			alert("아직 구현중입니다 ^_^");
 		});
-//--삭제 버튼 클릭 끝-----------------------------------------------------------
+//--등록 버튼 클릭 끝-----------------------------------------------------------
+		
 
 	});
-	 function popupOpen(){
-		 var popUrl = "adm_user_popup.jsp";
-		 var popOption = "width=550, height=550, resizable=no, scrollbars=no, status=no;";
-		 window.open(popUrl,"",popOption);
-		 
-	 }
 </script>
 </head>
 
@@ -152,8 +172,24 @@ li.dropdown {
 							
 						</div>
 						<!--// 로고 영역 -->
-						<!-- 메뉴 영역 -->
-						<%@ include file="../adm_base.jsp" %>
+						<!-- 메인메뉴 -->
+							<ul class="nav navbar-nav">
+								<li class="dropdown"><a href="#" class="dropbtn">항공권</a>
+									<div class="dropdown-content">
+										<a href="a_ticket/a_ticket.html">항공권 관리</a>
+										<a href="a_ticket/a_admin_user_reservation.html">고객예약정보 관리</a>
+									</div></li>
+								<li class="dropdown"><a href="#" class="dropbtn">게시판</a>
+									<div class="dropdown-content">
+										<a href="a_board/adm_qna_list.html">Q&amp;A</a>
+										<a href="a_board/adm_review_list.html">여행후기</a>
+									</div></li>
+								<li><a href="a_user/adm_user.html">회원정보</a></li>
+								<li><a href="a_hotel/adm_hotel.html">숙박</a></li>
+								<li><a href="a_auction/adm_auction.html">경매</a></li>
+								<li><a href="../main.html">로그아웃</a></li>
+							</ul>
+						</div>
 						<!--// 메뉴 영역 -->
 					</div>
 					<!--// 배경을 제외한 메뉴 항목의 영역 제한 -->
@@ -164,15 +200,15 @@ li.dropdown {
 		<div class="header_space"></div>
 		<div class="header_space"></div>
 		<!-- 내용영역 -->
-				<h3 class="text-center">회원정보리스트</h3>
+				<h3 class="text-center">여행후기관리</h3>
 				<!-- 검색창 -->
 				<div style="text-align: right;">
 					<form  name="form1" method="post" action="" >
 						<select name="search_option">
-							<option value="all">ID+이름+고객번호</option>
-							<option value="id">ID</option>
-							<option value="name">이름</option>
-							<option value="memberNum">고객번호</option>
+							<option value="all">제목+작성자+내용</option>
+							<option value="title">제목</option>
+							<option value="writer">작성자</option>
+							<option value="content">내용</option>
 						</select> 
 						<input name="keyword" value="keyword"> 
 						<input type="submit" value="조회">
@@ -185,39 +221,37 @@ li.dropdown {
 				<table class="table table-striped table-bordered table-hover">
 					<thead>
 						<tr>
-							<th class="text-center">고객번호</th>
-							<th class="text-center">ID</th>
-							<th class="text-center">이름</th>
-							<th class="text-center">생년월일</th>
-							<th class="text-center">성별</th>
-							<th class="text-center">E-mail</th>
-							<th class="text-center" >핸드폰</th>
-							<th class="text-center">주소</th>
-							<th class="text-center">가입일</th>
-							<th class="text-center"></th>
+							<th class="text-center"><input type="checkbox" id="checkAll"></th>
+							<th class="text-center">번호</th>
+							<th class="text-center">제목</th>
+							<th class="text-center">작성자</th>
+							<th class="text-center">등록일</th>
+							<th class="text-center">조회수</th>
+							<th class="text-center" ></th>
 							<th class="text-center"></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
+							<td class="text-center"><input type="checkbox"></td>
 							<td class="text-center">1</td>
-							<td class="text-center">user1</td>
-							<td class="text-center">홍길동</td>
-							<td class="text-center">2010.01.01</td>
-							<td class="text-center">남</td>
-							<td class="text-center">HongKill@gmail.com</td>
-							<td class="text-center">010-1234-4321</td>
-							<td class="text-center">서울시 서초구 서초동 서초아파트 1동 1호</td>
-							<td class="text-center">2010.01.01</td>
-							<td class="text-center"><input type="button" id="modify" value="수정"/></td>
+							<td>제목일 들어올 예정</td>
+							<td class="text-center">UserID</td>
+							<td class="text-center">2017.12.31</td>
+							<td class="text-center">57643</td>
+							<td class="text-center"><input type="button" id="reply" value="답변"/></td>
 							<td class="text-center"><input type="button" id="delete" value="삭제"/></td>
-							
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<!--// 테이블 끝 -->
-		
+		<!-- 일괄삭제 버튼 -->
+			<button id="deleteAll">일괄삭제</button>
+		<!--// 일괄삭제 버튼 -->
+		<!-- 등록 버튼 -->
+			<button id="write" class="pull-right">등록</button>
+		<!--// 등록 버튼 -->
 		
 		<!-- 페이징 -->
 				
