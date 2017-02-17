@@ -1,0 +1,111 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>회원정보수정</title>
+
+	<!-- 모바일 웹 페이지 설정 -->
+	<link rel="shortcut icon" href="assets/ico/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+
+	<!-- Twitter Bootstrap3 & jQuery -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- 나눔고딕 웹 폰트 적용 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/nanumfont.css" />
+	<style>
+		.table-responsive{
+			width:auto;
+			height:auto;
+		}
+		th{
+			width:100px;;
+		}
+		td{
+			width:400px;
+		}
+	</style>
+	<script type="text/javascript">
+	$(function() {
+//--수정 버튼 클릭-----------------------------------------------------------
+		$("#modify").click(function() {
+			alert("수정이 완료되었습니다.");
+			self.close();
+		});
+//--수정 버튼 클릭 끝-----------------------------------------------------------
+
+//--취소 버튼 클릭-----------------------------------------------------------
+		$("#cancel").click(function() {
+			self.close();
+		});
+//--취소 버튼 클릭 끝-----------------------------------------------------------
+
+//--취소 버튼 클릭-----------------------------------------------------------
+		$("#findAddress").click(function() {
+			alert("주소 찾기 기능은 아직 구현중입니다^_^");
+		});
+//--취소 버튼 클릭 끝-----------------------------------------------------------
+		
+		findAddress
+	});
+	
+	</script>
+</head>
+<body>
+
+<div class="table-responsive">
+				<table class="table table-striped table-bordered table-hover" >
+					<thead>
+						<tr>
+							<td colspan="2" class="text-center" >회원정보 수정</td>
+						</tr>
+						<tr>
+							<th class="text-center">고객번호</th>
+							<td class="text-center"></td>
+						</tr>
+						<tr>
+							<th class="text-center">ID</th>
+							<td class="text-center"></td>
+						</tr>
+						<tr>
+							<th class="text-center">이름</th>
+							<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<th class="text-center">생년월일</th>
+							<td class="text-center"></td>
+						</tr>
+						<tr>
+							<th class="text-center">성별</th>
+							<td class="text-center"></td>
+						</tr>
+						<tr>
+							<th class="text-center">E-Mail</th>
+							<td><input type="text" name="email"></td>
+						</tr>
+						<tr>
+							<th class="text-center">핸드폰</th>
+							<td><input type="text" name="mobileNum"></td>
+						</tr>
+						<tr>
+							<th class="text-center">주소</th>
+							<td><input type="text" name="address" readonly>&nbsp;&nbsp;<button id="findAddress">주소찾기</button></td>
+						</tr>
+						<tr>
+							<th class="text-center">가입일</th>
+							<td class="text-center"></td>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-center" ><button id="modify">수정</button>&nbsp;&nbsp;<button id="cancel">취소</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+</body>
+</html>
