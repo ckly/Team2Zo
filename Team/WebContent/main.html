@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -42,18 +40,23 @@
 			width: 16%;
 			text-align: center;
 		}
-		div.outbound div.inbound {
-			width:200px;
-			height:200px;
-			display:inline_block;
-		}
-		
 	</style>
-	
+	<!--pickadate plugin-->
+	<link rel="stylesheet" href="plugins/pickadate/themes/default.css">
+	<link rel="stylesheet" href="plugins/pickadate/themes/default.date.css">
+	<script type src="plugins/pickadate/picker.js"></script>
+	<script type src="plugins/pickadate/picker.date.js"></script>
+	<script type src="plugins/pickadate/translations/ko_KR.js"></script>
 
 	<script type="text/javascript">
 		$(function(){
-			
+			$("#log").click(function(){
+				var value = ("#log").val();
+				alert(value);
+				if ( value == "Login" ) {}
+				$("#log").html("Logout").attr("class","btn btn-danger");
+				}
+			});
 		});
 	</script>
 </head>
@@ -116,49 +119,77 @@
 			<div class="header_space hidden-xs"></div>
 			<div class="header_space_xs visible-xs"></div>
 		</div>
+
 		<!-- 내용영역 -->
-		<!-- 가는 여정, 오는 여정 선택 영역 -->
-		<div style="background-color:red;">
-			<!-- 가는 여정 -->
-			<div class="outbound" style="background-color:blue;">
-				<div class="step-avail">
-					<div class="title-area">
-						<h2>
-							가는날
-						</h2>
-					</div>
-				</div>
-				<div>
-				</div>
-			</div>
-			<!-- // 가는여정 -->
-			
-			<!-- 오는 여정 -->
-			<div class="inbound" style="background-color:yellow;">
-				<div class="step-avail">
-					<div class="title-area">
-						<h2>
-							오는날
-						</h2>
-					</div>
-				</div>
-				<div>
-				</div>
-			</div>
-			<!-- // 오는 여정 -->
-			
-			<!-- 운임 버튼 영역 -->
-			<div class="booking-summary">
-			
-			</div>
-			<!-- // 운임 버튼 영역 -->
-			
-		</div>
-		<!--// 가는 여정, 오는 여정 선택 영역 -->	
+
+			<!--여기에 작업하세요.-->
 
 		<!-- //내용영역 -->
+
+		<!--캐러셀 시작 /////////////////////////////////////////////// -->
+		<div class="container">
+			<div id="carousel-generic" class="carousel slide" data-ride="carousel">
+				<!-- 현재 위치 표시 -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-generic" data-slide-to="2"></li>
+				</ol>
+
+				<!-- 내용 영역 -->
+				<div class="carousel-inner">
+					<!-- 항목 (1) -->
+					<div class="item active">
+						<img src="img/slide-1.jpg" alt="슬라이더(1)">
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>HTML5 + CSS3 기반의 반응형 웹 퍼블리싱</h1>
+								<p>
+									반응형 웹 작업의 핵심 포인트는 부트스트랩에서 제공하는 Grid System 입니다.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 항목 (2) -->
+					<div class="item">
+						<img src="img/slide-2.jpg" alt="슬라이더(2)">
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>다음 단계는?</h1>
+								<p>
+									"Javascript + jQuery + Ajax 완벽 가이드"강의를 추천합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 항목 (3) -->
+					<div class="item">
+						<img src="img/slide-3.jpg" alt="슬라이더(3)">
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>CSS3는 CSS2가 기본입니다.</h1>
+								<p>
+									웹 표준에서의 모든 내용을 파악해야 CSS3가 다루기 쉽습니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 내용영역 -->
+
+				<!-- 이동 버튼 -->
+				<a class="left carousel-control" href="#carousel-generic" data-slide="prev"> <span class="icon-prev"></span> </a>
+				<a class="right carousel-control" href="#carousel-generic" data-slide="next"> <span class="icon-next"></span> </a>
+			</div>
+		</div>
+		<!--캐러셀 끝 /////////////////////////////////////////////// -->
+
 	</div>
 	<!--// 내용영역 -->
+
+
 	<!-- 푸터 -->
 	<footer>
 		<hr>
